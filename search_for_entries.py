@@ -16,7 +16,7 @@ def get_ids_from_server(file_in):
     from Bio.SeqRecord import SeqRecord
     from Bio.Seq import Seq
     from urllib.error import URLError
-    Entrez.email = "didny1@gmail.com"
+    Entrez.email = "your@email.com" #use your email!
     n =1
     records = []
     num_lines = sum(1 for line in open(file_in))
@@ -34,5 +34,5 @@ def get_ids_from_server(file_in):
         print(records)
         print('stopped at ',entry.id,' with ',round(n/num_lines,2),'% finished')
 
-
-get_ids_from_server(get_ids('2AXCGJ2C014-Alignment.xml'))
+file_name = 'your_blast_xml_file.xml'
+get_ids_from_server(get_ids(file_name))
